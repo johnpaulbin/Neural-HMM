@@ -16,7 +16,9 @@ from tqdm import tqdm
 from src.hparams import create_hparams
 from src.utilities.data import TextMelCollate, TextMelLoader
 
-
+import nltk
+nltk.download('punkt')
+    
 def to_gpu(x):
     x = x.contiguous()
 
